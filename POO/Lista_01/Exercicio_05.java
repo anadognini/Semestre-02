@@ -41,6 +41,7 @@ public class InteiroPositivo {
                 contador++;
             }
         }
+
         str += " e a quantidade de divisores é " + contador;
 
         return str;
@@ -62,5 +63,60 @@ public class InteiroPositivo {
         }
 
         return vetor;
+    }
+
+    // Letra f
+    public double valorI() {
+        double valSup = 1;
+        double valInf = 0;
+        double i = 0;
+        valInf = x;
+
+        for (int a = 1; a <= x; a++) {
+            if (a < x) {
+                i += valSup / valInf;
+                valSup += 1;
+                valInf -= 1;
+            }
+
+            if (a == x) {
+                i += valSup / valInf;
+            }
+        }
+
+        return i;
+    }
+
+    // Letra g
+    public double valorS() {
+        double s = 0;
+
+        for (double i = 1; i <= x; i++) {
+            if (i == 1.0) {
+                s += 1 / (fatS(2));
+            }
+
+            if (i % 2 == 0) {
+                s -= i / (fatS((i * 2)));
+            }
+
+            if (i % 2 != 0 && i > 1.0) {
+                s += i / (fatS((i * 2)));
+            }
+        }
+
+        return s;
+    }
+
+    // Letra h
+    public double fatS(double i) {
+        double f = i;
+
+        while (i > 1) {
+            f = f * (i - 1);
+            i--;
+        }
+
+        return f;
     }
 }
