@@ -70,18 +70,11 @@ public class InteiroPositivo {
         double valSup = 1;
         double valInf = 0;
         double i = 0;
-        valInf = x;
+
+        valInf = this.x;
 
         for (int a = 1; a <= x; a++) {
-            if (a < x) {
-                i += valSup / valInf;
-                valSup += 1;
-                valInf -= 1;
-            }
-
-            if (a == x) {
-                i += valSup / valInf;
-            }
+            i += valSup/a;
         }
 
         return i;
