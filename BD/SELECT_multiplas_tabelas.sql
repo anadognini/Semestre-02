@@ -60,7 +60,7 @@ SELECT v.nr_placa, p.nm_proprietario, l.nm_localidade
 FROM veiculo v, proprietario p, localidade l
 WHERE v.cd_proprietario = p.cd_proprietario
 	AND p.cd_localidade = l.cd_localidade
-    AND p.sg_uf = 'SC';
+	AND p.sg_uf = 'SC';
     
 -- Ou
 
