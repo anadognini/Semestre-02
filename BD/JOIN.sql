@@ -31,4 +31,6 @@ WHERE v.cd_cor(+) = c.cd_cor; -- LEFT JOIN
 
 -- Se tiver uma certa quantidade de tabelas, a quantidade de junções que devem ser feitas é o número de tabelas - 1
 
-
+SELECT v.nr_placa, c.ds_cor
+FROM veiculo v, cor c
+WHERE v.nr_placa IS null;
